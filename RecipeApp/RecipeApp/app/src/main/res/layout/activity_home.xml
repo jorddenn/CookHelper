@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_recipe"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context="uottawa.ca.recipeapp.Home">
+
+<!-->might as well leave buttons with hard codded text<-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textSearch">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/searchField"
+            android:id="@+id/homeSearchBox"
+            android:inputType="text"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeSearchbutton"
+            android:textSize="14sp"
+            android:onClick="onClickHomeSearchButton" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/classFilter"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textSearch">
+
+            <TextView
+                android:text="Search Class: "
+                android:id="@+id/homeSearchClassIdText"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeClassSpinner"
+                android:entries="@array/Class" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/categoryFilter"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryFilter">
+
+            <TextView
+                android:text="Search Category: "
+                android:id="@+id/homeSearchCategoryIdText"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeCategorySpinner"
+                android:entries="@array/Categories" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryFilter"
+            android:id="@+id/typeFilter">
+
+            <TextView
+                android:text="Search Type:        "
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeSearchTypeIdText"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeTypeSpinner"
+                android:entries="@array/Type" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/homeRecipeList"
+            android:layout_below="@+id/typeFilter"
+            android:layout_above="@+id/homeButtons"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1.2" />
+
+        <LinearLayout
+            android:id="@+id/homeButtons"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+
+            <Button
+                android:text="Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeResetButton"
+                android:layout_weight="1.2"
+                android:onClick="onClickHomeResetButton" />
+
+            <Button
+                android:text="Add Recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeAddButton"
+                android:layout_weight="1"
+                android:onClick="onClickHomeAddButton" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

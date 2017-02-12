@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Cook Helper</string>
+    <string name= "searchField">Type Here</string>
+    <string name= "editRecipeName">Recipe Name</string>
+    <string-array name="Type">
+        <item>-----</item>
+        <item>Italian</item>
+        <item>Chinese</item>
+        <item>Middle Eastern</item>
+        <item>Indian</item>
+        <item>American</item>
+    </string-array>
+    <string-array name="Categories">
+        <item>-----</item>
+        <item>Starter</item>
+        <item>Main Dish</item>
+        <item>Dessert</item>
+        <item>Drink</item>
+        <item>Sauce</item>
+        <item>Salad</item>
+    </string-array>
+    <string-array name="Class">
+        <item>-----</item>
+        <item>Beef</item>
+        <item>Chicken</item>
+        <item>Seafood</item>
+        <item>Veggie</item>
+    </string-array>
+    <string-array name="Units">
+        <item>-----</item>
+        <item>Tea Spoon</item>
+        <item>Table Spoon</item>
+        <item>Cup</item>
+        <item>Gram</item>
+        <item>Kilogram</item>
+        <item>Ounce</item>
+        <item>Piece</item>
+    </string-array>
+</resources>
